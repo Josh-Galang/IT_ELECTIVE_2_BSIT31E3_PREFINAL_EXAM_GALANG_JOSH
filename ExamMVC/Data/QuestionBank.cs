@@ -289,8 +289,7 @@ namespace ExamMVC.Data
                 },
                 CorrectLetter = "A",
                 Explanation = "A duplicate assignment risks inconsistent/duplicate data, which is fundamentally a data integrity concern."
-            },
-            // Questions are added incrementally, one per commit.
+            }
         };
     }
 }
