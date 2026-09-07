@@ -24,6 +24,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "C",
                 Explanation = "A database keeps data around after the application stops, unlike an in-memory collection which is lost when the app ends."
             },
+            new Question
+            {
+                Number = 2,
+                Text = "Which approach is being used when an existing database is used to generate EF Core entity classes?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Code-First" },
+                    new Option { Letter = "B", Text = "Database-First" },
+                    new Option { Letter = "C", Text = "Model-First" },
+                    new Option { Letter = "D", Text = "Controller-First" }
+                },
+                CorrectLetter = "B",
+                Explanation = "Generating entity classes FROM an existing database is the Database-First approach."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
