@@ -108,6 +108,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "One Section relates to many Students, which is the definition of a One-to-Many relationship."
             },
+            new Question
+            {
+                Number = 8,
+                Text = "In the following example, what is SectionId?\npublic int SectionId { get; set; }\npublic Section Section { get; set; }",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Primary key of Student" },
+                    new Option { Letter = "B", Text = "Foreign key referencing Section" },
+                    new Option { Letter = "C", Text = "Navigation property" },
+                    new Option { Letter = "D", Text = "Database connection string" }
+                },
+                CorrectLetter = "B",
+                Explanation = "SectionId is the scalar property that links a Student row to its related Section row — a foreign key."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
