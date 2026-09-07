@@ -150,6 +150,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = ".Include() performs eager loading, pulling in related entity data (like Section) along with the main query."
             },
+            new Question
+            {
+                Number = 11,
+                Text = "Why might a ViewModel be used when displaying Student and Section information?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "To replace the database" },
+                    new Option { Letter = "B", Text = "To combine or shape the data specifically needed by the view" },
+                    new Option { Letter = "C", Text = "To automatically create database tables" },
+                    new Option { Letter = "D", Text = "To prevent controllers from using LINQ" }
+                },
+                CorrectLetter = "B",
+                Explanation = "A ViewModel tailors and combines exactly the fields a view needs, decoupled from the raw entity shape."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
