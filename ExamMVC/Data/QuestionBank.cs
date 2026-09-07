@@ -66,6 +66,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "A",
                 Explanation = "DbContext manages the connection, tracks entities, and communicates with the database."
             },
+            new Question
+            {
+                Number = 5,
+                Text = "What does the following command primarily do?\ndotnet ef dbcontext scaffold \"ConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Deletes the database" },
+                    new Option { Letter = "B", Text = "Creates a new MVC project" },
+                    new Option { Letter = "C", Text = "Generates EF Core models and a DbContext from an existing database" },
+                    new Option { Letter = "D", Text = "Starts the MVC application" }
+                },
+                CorrectLetter = "C",
+                Explanation = "The 'dbcontext scaffold' command reverse-engineers an existing database into EF Core model classes and a DbContext."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
