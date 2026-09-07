@@ -206,6 +206,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "A",
                 Explanation = "Client-side checks can be disabled or bypassed, so the server must re-validate to protect data integrity."
             },
+            new Question
+            {
+                Number = 15,
+                Text = "A school requires every student to have a unique Student Number. Which rule best represents this requirement?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Student Number should always be nullable" },
+                    new Option { Letter = "B", Text = "Student Number should be unique" },
+                    new Option { Letter = "C", Text = "Student Number should always be the same" },
+                    new Option { Letter = "D", Text = "Student Number should contain only spaces" }
+                },
+                CorrectLetter = "B",
+                Explanation = "The requirement directly translates to a uniqueness constraint on Student Number."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
