@@ -52,6 +52,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "C",
                 Explanation = "EF Core is an ORM: it maps C# objects to rows/tables in a relational database."
             },
+            new Question
+            {
+                Number = 4,
+                Text = "Which EF Core component is primarily responsible for communicating with the database?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "DbContext" },
+                    new Option { Letter = "B", Text = "DbSetView" },
+                    new Option { Letter = "C", Text = "ControllerContext" },
+                    new Option { Letter = "D", Text = "RazorContext" }
+                },
+                CorrectLetter = "A",
+                Explanation = "DbContext manages the connection, tracks entities, and communicates with the database."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
