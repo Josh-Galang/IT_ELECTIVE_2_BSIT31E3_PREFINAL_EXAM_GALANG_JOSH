@@ -178,6 +178,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "A",
                 Explanation = "Include(s => s.Section) eagerly loads each Student's related Section so it's populated without extra queries."
             },
+            new Question
+            {
+                Number = 13,
+                Text = "Which type of validation occurs in the browser before a request is sent to the server?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Database-level validation" },
+                    new Option { Letter = "B", Text = "Client-side validation" },
+                    new Option { Letter = "C", Text = "Server-side validation" },
+                    new Option { Letter = "D", Text = "EF Core migration validation" }
+                },
+                CorrectLetter = "B",
+                Explanation = "Client-side validation runs in the browser (e.g., via JavaScript) before the form is submitted to the server."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
