@@ -122,6 +122,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "SectionId is the scalar property that links a Student row to its related Section row — a foreign key."
             },
+            new Question
+            {
+                Number = 9,
+                Text = "What is the purpose of a navigation property such as public Section Section { get; set; }?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "It stores the database password" },
+                    new Option { Letter = "B", Text = "It represents a relationship to another entity" },
+                    new Option { Letter = "C", Text = "It creates a new database" },
+                    new Option { Letter = "D", Text = "It validates the student's name" }
+                },
+                CorrectLetter = "B",
+                Explanation = "A navigation property lets you access the related entity object directly, representing the relationship in code."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
