@@ -248,6 +248,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "try...catch lets the controller gracefully catch and handle runtime exceptions instead of crashing."
             },
+            new Question
+            {
+                Number = 18,
+                Text = "Which middleware is commonly used in ASP.NET Core for centralized exception handling?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "UseDatabase()" },
+                    new Option { Letter = "B", Text = "UseExceptionHandler()" },
+                    new Option { Letter = "C", Text = "UseValidationHandler()" },
+                    new Option { Letter = "D", Text = "UseMvcDatabase()" }
+                },
+                CorrectLetter = "B",
+                Explanation = "UseExceptionHandler() is the built-in middleware for centralized, app-wide exception handling."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
