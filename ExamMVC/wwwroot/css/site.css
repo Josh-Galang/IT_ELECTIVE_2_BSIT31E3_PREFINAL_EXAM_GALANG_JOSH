@@ -1,0 +1,241 @@
+:root {
+  --paper: #faf6ec;
+  --ink: #23272f;
+  --accent: #7a3b2e;
+  --accent-2: #2f6f4f;
+  --line: #d8cdb8;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Iowan Old Style", serif;
+  background: var(--paper);
+  color: var(--ink);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px);
+  background-size: 100% 2.1em;
+}
+
+.exam-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 40px 18px;
+  border-bottom: 3px double var(--accent);
+  background: var(--paper);
+}
+
+.exam-header__seal {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+
+.exam-header__college {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.exam-header__title {
+  margin: 4px 0;
+  font-size: 1.6rem;
+}
+
+.exam-header__sub {
+  margin: 0;
+  font-style: italic;
+  color: #6b6252;
+}
+
+.student-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 12px 40px;
+  background: #fffdf7;
+  border-bottom: 1px solid var(--line);
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.student-strip .label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #8a8060;
+  display: block;
+}
+
+.student-strip .value {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.progress-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.85rem;
+  color: var(--accent-2);
+  margin-bottom: 24px;
+}
+
+.progress-track {
+  flex: 1;
+  height: 8px;
+  background: var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-2);
+  transition: width 0.4s ease;
+}
+
+.question-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.q-card {
+  display: flex;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px 22px;
+  box-shadow: 0 2px 6px rgba(35, 39, 47, 0.06);
+}
+
+.q-card__number {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.q-card__body { flex: 1; }
+
+.q-card__text {
+  margin: 2px 0 12px;
+  font-size: 1.05rem;
+  white-space: pre-line;
+}
+
+.q-card__options {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.92rem;
+  border: 1px solid transparent;
+}
+
+.option--correct {
+  background: #eaf6ee;
+  border-color: var(--accent-2);
+  color: #1e4c34;
+  font-weight: bold;
+}
+
+.option__letter {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #b8b0a0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex: 0 0 auto;
+}
+
+.option--correct .option__letter {
+  border-color: var(--accent-2);
+  background: var(--accent-2);
+  color: #fff;
+}
+
+.option__check {
+  margin-left: auto;
+  color: var(--accent-2);
+}
+
+.q-card__answer {
+  border-top: 1px dashed var(--line);
+  padding-top: 10px;
+}
+
+.answer-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.explanation {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+  color: #4a4636;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.empty-state {
+  text-align: center;
+  color: #8a8060;
+  font-style: italic;
+}
+
+.exam-footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 0.75rem;
+  color: #8a8060;
+  border-top: 1px solid var(--line);
+  font-family: "Trebuchet MS", sans-serif;
+}
