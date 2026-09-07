@@ -234,6 +234,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "A",
                 Explanation = "A database-level constraint is the last line of defense, enforcing uniqueness even if app-level checks are skipped."
             },
+            new Question
+            {
+                Number = 17,
+                Text = "What is the purpose of a try...catch block in a controller?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "To create navigation properties" },
+                    new Option { Letter = "B", Text = "To catch and handle exceptions that may occur during execution" },
+                    new Option { Letter = "C", Text = "To generate database tables" },
+                    new Option { Letter = "D", Text = "To perform client-side validation" }
+                },
+                CorrectLetter = "B",
+                Explanation = "try...catch lets the controller gracefully catch and handle runtime exceptions instead of crashing."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
