@@ -276,6 +276,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "When the requested resource doesn't exist, the correct HTTP response is a 404 Not Found."
             },
+            new Question
+            {
+                Number = 20,
+                Text = "A student already belongs to Section A for a particular subject. The application attempts to assign the same student to Section A again. What is the primary concern?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Data integrity" },
+                    new Option { Letter = "B", Text = "HTML formatting" },
+                    new Option { Letter = "C", Text = "CSS inheritance" },
+                    new Option { Letter = "D", Text = "Razor syntax" }
+                },
+                CorrectLetter = "A",
+                Explanation = "A duplicate assignment risks inconsistent/duplicate data, which is fundamentally a data integrity concern."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
