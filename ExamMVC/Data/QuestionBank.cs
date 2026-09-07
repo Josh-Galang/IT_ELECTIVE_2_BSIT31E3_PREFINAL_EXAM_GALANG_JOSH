@@ -164,6 +164,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "A ViewModel tailors and combines exactly the fields a view needs, decoupled from the raw entity shape."
             },
+            new Question
+            {
+                Number = 12,
+                Text = "Consider this query:\nvar students = _context.Students.Include(s => s.Section).ToList();\nWhat is the main benefit of Include(s => s.Section)?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "It loads the related Section navigation property" },
+                    new Option { Letter = "B", Text = "It creates a Section object manually" },
+                    new Option { Letter = "C", Text = "It removes the foreign key" },
+                    new Option { Letter = "D", Text = "It prevents the query from accessing the database" }
+                },
+                CorrectLetter = "A",
+                Explanation = "Include(s => s.Section) eagerly loads each Student's related Section so it's populated without extra queries."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
