@@ -38,6 +38,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "Generating entity classes FROM an existing database is the Database-First approach."
             },
+            new Question
+            {
+                Number = 3,
+                Text = "What is the primary purpose of Entity Framework Core?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "To create HTML pages automatically" },
+                    new Option { Letter = "B", Text = "To replace the MVC Controller" },
+                    new Option { Letter = "C", Text = "To map objects in code to relational database data" },
+                    new Option { Letter = "D", Text = "To replace the C# compiler" }
+                },
+                CorrectLetter = "C",
+                Explanation = "EF Core is an ORM: it maps C# objects to rows/tables in a relational database."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
