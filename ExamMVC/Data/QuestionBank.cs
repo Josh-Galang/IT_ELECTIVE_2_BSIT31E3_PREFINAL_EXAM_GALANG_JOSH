@@ -220,6 +220,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "The requirement directly translates to a uniqueness constraint on Student Number."
             },
+            new Question
+            {
+                Number = 16,
+                Text = "Which is the best reason for having a database-level unique constraint on StudentNumber?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "It protects data integrity even if application-level validation is bypassed" },
+                    new Option { Letter = "B", Text = "It makes Razor Views render faster" },
+                    new Option { Letter = "C", Text = "It removes the need for a Controller" },
+                    new Option { Letter = "D", Text = "It automatically creates a ViewModel" }
+                },
+                CorrectLetter = "A",
+                Explanation = "A database-level constraint is the last line of defense, enforcing uniqueness even if app-level checks are skipped."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
