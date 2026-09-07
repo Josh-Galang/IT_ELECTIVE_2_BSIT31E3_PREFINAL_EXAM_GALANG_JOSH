@@ -80,6 +80,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "C",
                 Explanation = "The 'dbcontext scaffold' command reverse-engineers an existing database into EF Core model classes and a DbContext."
             },
+            new Question
+            {
+                Number = 6,
+                Text = "Where is a database connection string commonly stored in an ASP.NET Core MVC application?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Program.cs only" },
+                    new Option { Letter = "B", Text = "appsettings.json" },
+                    new Option { Letter = "C", Text = "Index.cshtml" },
+                    new Option { Letter = "D", Text = "Student.cs" }
+                },
+                CorrectLetter = "B",
+                Explanation = "Connection strings are conventionally stored in appsettings.json under a \"ConnectionStrings\" section."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
