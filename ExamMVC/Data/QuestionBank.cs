@@ -94,6 +94,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "Connection strings are conventionally stored in appsettings.json under a \"ConnectionStrings\" section."
             },
+            new Question
+            {
+                Number = 7,
+                Text = "A Student belongs to exactly one Section, while a Section can contain many students. What type of relationship is this?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "One-to-One" },
+                    new Option { Letter = "B", Text = "One-to-Many" },
+                    new Option { Letter = "C", Text = "Many-to-Many" },
+                    new Option { Letter = "D", Text = "Many-to-One only" }
+                },
+                CorrectLetter = "B",
+                Explanation = "One Section relates to many Students, which is the definition of a One-to-Many relationship."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
