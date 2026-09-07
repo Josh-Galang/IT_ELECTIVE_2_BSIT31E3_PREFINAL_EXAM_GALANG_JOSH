@@ -136,6 +136,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "A navigation property lets you access the related entity object directly, representing the relationship in code."
             },
+            new Question
+            {
+                Number = 10,
+                Text = "What does .Include() generally allow EF Core to do?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Delete the Section table" },
+                    new Option { Letter = "B", Text = "Load related Section data together with Students" },
+                    new Option { Letter = "C", Text = "Create a new Student" },
+                    new Option { Letter = "D", Text = "Validate Student input" }
+                },
+                CorrectLetter = "B",
+                Explanation = ".Include() performs eager loading, pulling in related entity data (like Section) along with the main query."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
