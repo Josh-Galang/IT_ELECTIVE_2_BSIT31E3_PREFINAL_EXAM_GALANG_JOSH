@@ -262,6 +262,20 @@ namespace ExamMVC.Data
                 CorrectLetter = "B",
                 Explanation = "UseExceptionHandler() is the built-in middleware for centralized, app-wide exception handling."
             },
+            new Question
+            {
+                Number = 19,
+                Text = "A user requests /Student/999, but Student 999 does not exist. What would be the most appropriate response?",
+                Options = new List<Option>
+                {
+                    new Option { Letter = "A", Text = "Display the student's information anyway" },
+                    new Option { Letter = "B", Text = "Display a Not Found (404) response/page" },
+                    new Option { Letter = "C", Text = "Delete Student 999" },
+                    new Option { Letter = "D", Text = "Create Student 999 automatically" }
+                },
+                CorrectLetter = "B",
+                Explanation = "When the requested resource doesn't exist, the correct HTTP response is a 404 Not Found."
+            },
             // Questions are added incrementally, one per commit.
         };
     }
